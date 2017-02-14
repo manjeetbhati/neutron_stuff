@@ -78,7 +78,6 @@ with open(file_name, 'w') as f:
     print("Querying Launchpad, this might take a while...")
     write_queries_for_project(f, neutron)
 
-import pdb
 if not os.path.exists('gerrit-dash-creator'):  
     git.Git().clone("https://github.com/openstack/gerrit-dash-creator")
 call('./gerrit-dash-creator/gerrit-dash-creator ' + file_name, shell=True)
